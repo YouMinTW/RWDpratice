@@ -1,0 +1,254 @@
+/* CSS reset */
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+	display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+
+
+/* My code */
+
+*{
+    text-decoration: none;
+}
+
+body{
+    /* background-color: #f3f3f3; */
+}
+header{
+    background-color: #fff;
+    width: 100%;
+    height:100px;
+}
+header .header-brand{
+    font-family: catamaran;
+    font-size: 24px;
+    font-weight:900;
+    text-transform: uppercase;
+    display: block;
+    color: #111;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+}
+/* **********ul的位置調整技巧*************** */
+/* 法2有父層可以在父層設定text-align: center，並修改ul的 display 狀態為 inline-block */
+/* 法3沒有父層那我們可以利用margin: 0 auto以及display:table調整ul： */
+header nav ul{
+    /* block好像已經是預設了 */
+    display: block;
+
+    margin: 0 auto;
+    width: fit-content;
+}
+header nav ul li{
+    display: inline-block;
+    float:left;
+    /* 擠掉旁邊的空隙 */
+    list-style: none;
+    padding: 0 16px;
+}
+header nav ul li a{
+    font-family: catamaran;
+    font-size: 16px;
+    color:#111 ; 
+}
+header .header-cases{
+    display: none;
+}
+
+.index-banner{
+    width: 100%;
+    /* iphone678底下好像會有灰色空框，是沒作用 */
+    /* height: calc(100vh-100px); 加減乘除左右要有空白*/
+    height: calc(100vh - 100px);
+    /* height: 100vh; */
+    /* calc計算 100px 是header高度 */
+    background-image: url(/git_github/RWD3/img/SoftwareEngineer.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: table;
+    /* table, table0-cell 不直接給padding margin怕其他版本跑掉 */
+
+}
+
+.vertical-center{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.index-banner h2{
+    font-family: catamaran;
+    font-size: 60px;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 8px #111;
+    line-height: 70px;
+}
+
+.index-banner h1{
+    font-family: Cormorant Garamond;
+    font-size: 28px;
+    font-weight: 100;
+    font-style: italic;
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 8px #111;
+    line-height: 40px;
+}
+
+.index-links div{
+    margin:16px 16px 0;
+    width: calc(100% - 32px);
+    height: 100px;
+    background: #f2f2f2;
+} 
+
+.index-links div h3{
+    font-family: catamaran;
+    font-size: 28px;
+    font-weight: 600;
+    color: #111;
+    text-align: center;
+    line-height: 100px;
+    text-transform: uppercase;
+}
+
+footer{
+    width: calc(100% - 80px);
+    margin-top: 20px;
+    padding:40px;
+    background: #111;
+    overflow: hidden;
+}
+
+footer ul{
+    width: fit-content;
+    float: left;
+    padding-left: 20px;;
+}
+
+footer ul li{
+    display: block;
+    list-style: none;
+}
+
+footer ul li a {
+    font-family: catamaran;
+    font-size: 24px;
+    color:#fff;
+    line-height: 40px;
+}
+.footer-links-cases{
+    display: none;
+}
+.footer-sm{
+    width:50px;
+    float: right;
+}
+.footer-sm img{
+    width: 100%;
+    margin-bottom: 10px;
+}
