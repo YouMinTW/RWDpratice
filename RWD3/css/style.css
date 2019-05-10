@@ -131,7 +131,8 @@ header .header-brand{
     text-align: center;
     padding: 20px 0;
 }
-/* **********ul的位置調整技巧*************** */
+/* **********ul置中的位置調整技巧*************** */
+/* 法1用   width: fit-content; 搭配 margin: 0 auto;*/
 /* 法2有父層可以在父層設定text-align: center，並修改ul的 display 狀態為 inline-block */
 /* 法3沒有父層那我們可以利用margin: 0 auto以及display:table調整ul： */
 header nav ul{
@@ -165,8 +166,8 @@ header .header-cases{
         text-align: left;
         padding: 0 20px 0 40px;
         float: left;
-        /* 我把上面flaot改下面 display: inline-block; 會使右邊nav掉下去超過100px*/
-                border-right: 3px solid #111;
+        /* 我把上面flaot改 display: inline-block; 會使右邊nav掉下去超過100px*/
+        border-right: 3px solid #111;
         line-height: 38px;
         
     }
